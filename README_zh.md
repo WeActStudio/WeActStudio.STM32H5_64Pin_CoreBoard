@@ -3,7 +3,12 @@
 ![display](Images/1.png)
 **STM32H562RGT6**  
 Freq:250Mhz Max  
-RAM:640KB,ROM:1024KB  
+RAM:640KB, ROM:1024KB  
+
+![display](Images/2.png)
+**STM32H503RBT6**  
+Freq:250Mhz Max  
+RAM:32KB, ROM:128KB  
 
 ST 官方网站 Website www.st.com
 

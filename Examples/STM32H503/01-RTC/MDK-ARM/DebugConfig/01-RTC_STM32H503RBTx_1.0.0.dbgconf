@@ -1,0 +1,97 @@
+// File: STM32H503xx.dbgconf
+// Version: 1.0.1
+// Note: refer to STM32H503 reference manual (RM0492)
+//       refer to STM32H503xx datasheet
+
+// <<< Use Configuration Wizard in Context Menu >>>
+
+// <h> Debug MCU configuration register (DBGMCU_CR)
+//   <o.2>  DBG_STANDBY              <i> Debug standby mode
+//   <o.1>  DBG_STOP                 <i> Debug stop mode
+// </h>
+DbgMCU_CR = 0x00000006;
+
+// <h> Debug MCU APB1L freeze register (DBGMCU_APB1LFZR)
+//                                   <i> Reserved bits must be kept at reset value
+//   <o.23> DBG_I2C3_STOP            <i> I2C3 SMBUS timeout is frozen while CPU is in debug mode
+//   <o.22> DBG_I2C2_STOP            <i> I2C2 SMBUS timeout is frozen while CPU is in debug mode
+//   <o.21> DBG_I2C1_STOP            <i> I2C1 SMBUS timeout is frozen while CPU is in debug mode
+//   <o.12> DBG_IWDG_STOP            <i> Debug independent watchdog is frozen while CPU is in debug mode
+//   <o.11> DBG_WWDG_STOP            <i> Debug window watchdog is frozen while CPU is in debug mode
+//   <o.5>  DBG_TIM7_STOP            <i> TIM7 is frozen while CPU is in debug mode
+//   <o.4>  DBG_TIM6_STOP            <i> TIM6 is frozen while CPU is in debug mode
+//   <o.1>  DBG_TIM3_STOP            <i> TIM3 is frozen while CPU is in debug mode
+//   <o.0>  DBG_TIM2_STOP            <i> TIM2 is frozen while CPU is in debug mode
+// </h>
+DbgMCU_APB1L_Fz = 0x00000000;
+
+// <h> Debug MCU APB1H freeze register (DBGMCU_APB1HFZR)
+//                                   <i> Reserved bits must be kept at reset value
+//   <o.5>  DBG_LPTIM2_STOP          <i> LPTIM2 is frozen while CPU is in debug mode
+// </h>
+DbgMCU_APB1H_Fz = 0x00000000;
+
+// <h> Debug MCU APB2 freeze register (DBGMCU_APB2FZR)
+//                                   <i> Reserved bits must be kept at reset value
+//   <o.11> DBG_TIM1_STOP            <i> TIM1 is frozen while CPU is in debug mode
+// </h>
+DbgMCU_APB2_Fz = 0x00000000;
+
+// <h> Debug MCU APB3 freeze register (DBGMCU_APB3FZR)
+//                                   <i> Reserved bits must be kept at reset value
+//   <o.30> DBG_RTC_STOP             <i> RTC is frozen while CPU is in debug mode.
+//   <o.17> DBG_LPTIM1_STOP          <i> LPTIM1 is frozen while CPU is in debug mode
+//   <o.12> DBG_I2C3_STOP            <i> I2C3 is frozen while CPU is in debug mode
+// </h>
+DbgMCU_APB3_Fz = 0x00000000;
+
+// <h> Debug MCU AHB1 freeze register (DBGMCU_AHB1FZR)
+//                                   <i> Reserved bits must be kept at reset value
+//   <o.23> DBG_GPDMA2_7_STOP        <i> GPDMA2 channel 7 is frozen while CPU is in debug mode
+//   <o.22> DBG_GPDMA2_6_STOP        <i> GPDMA2 channel 6 is frozen while CPU is in debug mode
+//   <o.21> DBG_GPDMA2_5_STOP        <i> GPDMA2 channel 5 is frozen while CPU is in debug mode
+//   <o.20> DBG_GPDMA2_4_STOP        <i> GPDMA2 channel 4 is frozen while CPU is in debug mode
+//   <o.19> DBG_GPDMA2_3_STOP        <i> GPDMA2 channel 3 is frozen while CPU is in debug mode
+//   <o.18> DBG_GPDMA2_2_STOP        <i> GPDMA2 channel 2 is frozen while CPU is in debug mode
+//   <o.17> DBG_GPDMA2_1_STOP        <i> GPDMA2 channel 1 is frozen while CPU is in debug mode
+//   <o.16> DBG_GPDMA2_0_STOP        <i> GPDMA2 channel 0 is frozen while CPU is in debug mode
+//   <o.7>  DBG_GPDMA1_7_STOP        <i> GPDMA1 channel 7 is frozen while CPU is in debug mode
+//   <o.6>  DBG_GPDMA1_6_STOP        <i> GPDMA1 channel 6 is frozen while CPU is in debug mode
+//   <o.5>  DBG_GPDMA1_5_STOP        <i> GPDMA1 channel 5 is frozen while CPU is in debug mode
+//   <o.4>  DBG_GPDMA1_4_STOP        <i> GPDMA1 channel 4 is frozen while CPU is in debug mode
+//   <o.3>  DBG_GPDMA1_3_STOP        <i> GPDMA1 channel 3 is frozen while CPU is in debug mode
+//   <o.2>  DBG_GPDMA1_2_STOP        <i> GPDMA1 channel 2 is frozen while CPU is in debug mode
+//   <o.1>  DBG_GPDMA1_1_STOP        <i> GPDMA1 channel 1 is frozen while CPU is in debug mode
+//   <o.0>  DBG_GPDMA1_0_STOP        <i> GPDMA1 channel 0 is frozen while CPU is in debug mode
+// </h>
+DbgMCU_AHB1_Fz = 0x00000000;
+
+// <h> TPIU Pin Routing
+//   <o0> TRACECLK
+//     <i> ETM Trace Clock
+//       <0x00010005=> Pin PB5
+//   <o1> TRACED0
+//     <i> ETM Trace Data 0
+//       <0x00020001=> Pin PC1
+//       <0x00010006=> Pin PB6
+//   <o2> TRACED1
+//     <i> ETM Trace Data 1
+//       <0x00020008=> Pin PC8
+//       <0x00010007=> Pin PB7
+//   <o3> TRACED2
+//     <i> ETM Trace Data 2
+//       <0x00030002=> Pin PD2
+//       <0x00010008=> Pin PB8
+//       <0x00000009=> Pin PA9
+//   <o4> TRACED3
+//     <i> ETM Trace Data 3
+//       <0x0002000C=> Pin PC12
+//       <0x0000000C=> Pin PA12
+// </h>
+TraceClk_Pin = 0x00010005;
+TraceD0_Pin  = 0x00010006;
+TraceD1_Pin  = 0x00010007;
+TraceD2_Pin  = 0x00010008;
+TraceD3_Pin  = 0x0002000C;
+
+// <<< end of configuration section >>>
